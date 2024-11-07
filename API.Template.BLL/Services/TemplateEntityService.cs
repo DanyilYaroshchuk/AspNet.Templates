@@ -6,36 +6,36 @@ using API.Template.DAL.DataModels;
 
 namespace API.Template.BLL.Services
 {
-    public class TemplateEntityService : ITemplateEntityService
+    public class TemplateEntityService : ITemplateService
     {
-        private readonly ITemplateEntityRepository _repository;
+        private readonly ITemplateRepository _repository;
         private readonly IMapper _mapper;
 
-        public TemplateEntityService(ITemplateEntityRepository repository, IMapper mapper)
+        public TemplateEntityService(ITemplateRepository repository, IMapper mapper)
         {
             _repository = repository;
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<TemplateEntityDto>> GetAllAsync()
+        public async Task<IEnumerable<TemplateDto>> GetAllAsync()
         {
             var entities = await _repository.GetAllAsync();
-            return _mapper.Map<IEnumerable<TemplateEntityDto>>(entities);
+            return _mapper.Map<IEnumerable<TemplateDto>>(entities);
         }
 
-        public async Task<TemplateEntityDto> GetByIdAsync(long id)
+        public async Task<TemplateDto> GetByIdAsync(long id)
         {
             var entity = await _repository.GetByIdAsync(id);
-            return _mapper.Map<TemplateEntityDto>(entity);
+            return _mapper.Map<TemplateDto>(entity);
         }
 
-        public async Task AddAsync(TemplateEntityDto dto)
+        public async Task AddAsync(TemplateDto dto)
         {
             var entity = _mapper.Map<TemplateEntitiy>(dto);
             await _repository.AddAsync(entity);
         }
 
-        public async Task UpdateAsync(TemplateEntityDto dto)
+        public async Task UpdateAsync(TemplateDto dto)
         {
             var entity = _mapper.Map<TemplateEntitiy>(dto);
             await _repository.UpdateAsync(entity);

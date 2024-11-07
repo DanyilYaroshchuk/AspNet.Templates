@@ -13,7 +13,8 @@ namespace API.Template.BLL.Extensions
             services.AddAutoMapper(typeof(AutoMapperProfile));
 
             // Register services
-            services.AddScoped<ITemplateEntityService, TemplateEntityService>();
+            services.AddScoped<ITemplateService, TemplateEntityService
+                >();
 
             return services;
         }

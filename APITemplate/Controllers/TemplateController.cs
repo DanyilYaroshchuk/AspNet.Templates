@@ -6,11 +6,11 @@ namespace APITemplate.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TemplateEntityController : ControllerBase
+    public class TemplateController : ControllerBase
     {
-        private readonly ITemplateEntityService _templateEntityService;
+        private readonly ITemplateService _templateEntityService;
 
-        public TemplateEntityController(ITemplateEntityService templateEntityService)
+        public TemplateController(ITemplateService templateEntityService)
         {
             _templateEntityService = templateEntityService;
         }
@@ -34,7 +34,7 @@ namespace APITemplate.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] TemplateEntityDto dto)
+        public async Task<IActionResult> Create([FromBody] TemplateDto dto)
         {
             if (!ModelState.IsValid)
             {
@@ -46,7 +46,7 @@ namespace APITemplate.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update([FromBody] TemplateEntityDto dto)
+        public async Task<IActionResult> Update([FromBody] TemplateDto dto)
         {
             if (!ModelState.IsValid)
             {

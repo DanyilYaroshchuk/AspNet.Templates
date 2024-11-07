@@ -3,9 +3,9 @@ using API.Template.DAL.Repositories.Interfaces;
 
 namespace API.Template.DAL.Repositories.Implementations
 {
-    public class TemplateEntityRepository : GenericRepository<TemplateEntitiy>, ITemplateEntityRepository
+    public class TemplateRepository : GenericRepository<TemplateEntitiy>, ITemplateRepository
     {
-        public TemplateEntityRepository(TemplateDbContext context) : base(context)
+        public TemplateRepository(TemplateDbContext context) : base(context)
         {
         }
 

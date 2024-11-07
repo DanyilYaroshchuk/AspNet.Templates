@@ -11,7 +11,7 @@ namespace API.Template.DAL.Extensions
         {
             services.AddDbContext<TemplateDbContext>(options =>
                     options.UseSqlServer(connectionString));
-            services.AddScoped<ITemplateEntityRepository, TemplateEntityRepository>();
+            services.AddScoped<ITemplateRepository, TemplateRepository>();
 
             return services;
         }

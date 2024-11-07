@@ -1,6 +1,6 @@
 namespace API.Template.BLL.DTOs
 {
-    public class TemplateEntityDto
+    public class TemplateDto
     {
         public long Id { get; set; }
         public string? String { get; set; }

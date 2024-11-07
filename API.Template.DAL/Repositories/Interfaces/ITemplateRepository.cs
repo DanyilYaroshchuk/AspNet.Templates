@@ -2,7 +2,7 @@
 
 namespace API.Template.DAL.Repositories.Interfaces
 {
-    public interface ITemplateEntityRepository : IGenericRepository<TemplateEntitiy>
+    public interface ITemplateRepository : IGenericRepository<TemplateEntitiy>
     {
         // Add any additional methods specific to TemplateEntitiy if needed
     }

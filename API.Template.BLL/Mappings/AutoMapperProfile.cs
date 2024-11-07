@@ -8,7 +8,7 @@ namespace API.Template.BLL.Mappings
     {
         public AutoMapperProfile()
         {
-            CreateMap<TemplateEntitiy, TemplateEntityDto>().ReverseMap();
+            CreateMap<TemplateEntitiy, TemplateDto>().ReverseMap();
         }
     }
 }

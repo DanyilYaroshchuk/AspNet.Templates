@@ -9,10 +9,10 @@ namespace API.Template.DAL
             : base(options)
         {
             // Ensure the database is created from the model
-            Database.EnsureCreated();
+            Database.Migrate();
         }
 
-        public DbSet<TemplateEntitiy> TemplateEntities { get; set; }
+        public DbSet<TemplateEntitiy> Templates { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
