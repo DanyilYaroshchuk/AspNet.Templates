@@ -5,7 +5,8 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>45c04ece-4f86-4a7a-af29-d5cd72d311ab</UserSecretsId>
-    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <!-- Remove or update the DockerDefaultTargetOS property -->
+    <!-- <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS> -->
   </PropertyGroup>
 
   <ItemGroup>

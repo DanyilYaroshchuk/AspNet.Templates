@@ -8,7 +8,6 @@ namespace API.Template.DAL
         public TemplateDbContext(DbContextOptions<TemplateDbContext> options)
             : base(options)
         {
-            // Ensure the database is created from the model
             Database.Migrate();
         }
 

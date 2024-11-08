@@ -1,0 +1,7 @@
+to add migration 
+opent Package Manager Console and write the following command
+Add-Migration MigrationName
+
+to update the database with the new migration
+write the following command
+Update-Database
